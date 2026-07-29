@@ -3,6 +3,15 @@
 <p align="center">
   <img src="assets/banner.svg" alt="Biomedical Data Scientist Interview Questions Banner" width="100%">
 </p>
+<!--
+SEO Metadata:
+- Keywords: Biomedical Data Scientist Interview Questions, Bioinformatician Interview prep, Clinical Data Science, EHR analysis, Real-World Data, RWD, RWE, Biostatistics, Machine Learning in Medicine, Clinical Prediction Models, Health IT, Medical Imaging AI.
+- Description: A comprehensive, curated resource of interview questions and answers for Biomedical Data Scientist roles at biotech, pharma, and health systems.
+-->
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a><a href="https://github.com/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions?style=flat-square&color=yellow" alt="GitHub stars"/></a><a href="https://github.com/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions?style=flat-square&color=lightgrey" alt="GitHub forks"/></a><a href="https://github.com/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions?style=flat-square&color=red" alt="GitHub issues"/></a><a href="https://github.com/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions?style=flat-square&color=blue" alt="License"/></a>
+</p>
 
 A curated collection of interview questions (with answers) for **Biomedical Data Scientist** roles — a well-established and widely-hired title across academic medical centers, health systems, biotech and pharma companies, and health-tech companies, sitting at the intersection of clinical/health data (EHR, claims, registries), applied statistics and machine learning, biomedical domain knowledge (imaging, wearables, multi-omics), and the practical engineering discipline of getting a model into real, reliable use.
 

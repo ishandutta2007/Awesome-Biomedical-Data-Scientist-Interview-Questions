@@ -60,4 +60,17 @@ Contributions welcome, especially from people with real backgrounds in clinical 
 ## 📄 License
 
 [CC BY-SA 4.0](LICENSE) — free to use and adapt, with attribution, sharing improvements back under the same license.
+
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Biomedical-Data-Scientist-Interview-Questions&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Biomedical-Data-Scientist-Interview-Questions&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
 # Awesome-Biomedical-Data-Scientist-Interview-Questions
+

@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f24" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Theme Color Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-subtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Animations for Dynamic Aspects */
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.15); }
+    }
+    @keyframes ecgMove {
+      0% { stroke-dashoffset: 2000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes dnaRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -40;
+      }
+    }
+
+    .node-pulse-1 { animation: pulse 3s infinite ease-in-out; transform-origin: 1050px 100px; }
+    .node-pulse-2 { animation: pulse 4s infinite ease-in-out 1s; transform-origin: 1100px 220px; }
+    .node-pulse-3 { animation: pulse 3.5s infinite ease-in-out 0.5s; transform-origin: 980px 180px; }
+    
+    .ecg-line {
+      stroke: #38bdf8;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 2000;
+      animation: ecgMove 8s linear infinite;
+      filter: url(#glow-subtle);
+    }
+    
+    .dna-strand {
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .data-flow {
+      stroke-dasharray: 8, 8;
+      animation: dash 2s linear infinite;
+    }
+
+    .title-text {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      fill: url(#primaryGrad);
+      font-size: 44px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle-text {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 500;
+      fill: #94a3b8;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .tag-container {
+      fill: #1e293b;
+      stroke: #334155;
+      stroke-width: 1;
+      rx: 6px;
+    }
+
+    .tag-text {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="16" />
+  
+  <!-- Subtle Grid Pattern in background -->
+  <g opacity="0.05">
+    <path d="M 0,50 L 1200,50 M 0,100 L 1200,100 M 0,150 L 1200,150 M 0,200 L 1200,200 M 0,250 L 1200,250 M 0,300 L 1200,300" stroke="#cbd5e1" stroke-width="1" />
+    <path d="M 100,0 L 100,350 M 200,0 L 200,350 M 300,0 L 300,350 M 400,0 L 400,350 M 500,0 L 500,350 M 600,0 L 600,350 M 700,0 L 700,350 M 800,0 L 800,350 M 900,0 L 900,350 M 1000,0 L 1000,350 M 1100,0 L 1100,350" stroke="#cbd5e1" stroke-width="1" />
+  </g>
+
+  <!-- Animated ECG / Heartbeat Wave in Background -->
+  <path class="ecg-line" d="M -50,260 L 150,260 L 180,260 L 195,200 L 210,320 L 225,260 L 250,260 L 400,260 L 430,260 L 445,180 L 460,330 L 475,260 L 500,260 L 700,260 L 730,260 L 745,190 L 760,310 L 775,260 L 800,260 L 950,260 L 980,260 L 995,210 L 1010,300 L 1025,260 L 1250,260" opacity="0.35" />
+
+  <!-- DNA Strand Graphic (Left Side) -->
+  <g class="dna-strand" transform="translate(60, 45)">
+    <!-- Backbones -->
+    <path d="M 30,30 Q 60,80 30,130 T 30,230" fill="none" stroke="url(#dnaGrad)" stroke-width="4" filter="url(#glow-subtle)" />
+    <path d="M 80,30 Q 50,80 80,130 T 80,230" fill="none" stroke="url(#dnaGrad)" stroke-width="4" filter="url(#glow-subtle)" />
+    
+    <!-- Base Pairs (Rungs) -->
+    <line x1="33" y1="50" x2="77" y2="50" stroke="#a78bfa" stroke-width="2" opacity="0.8" />
+    <line x1="45" y1="80" x2="65" y2="80" stroke="#f472b6" stroke-width="2" opacity="0.8" />
+    <line x1="50" y1="110" x2="60" y2="110" stroke="#60a5fa" stroke-width="2" opacity="0.8" />
+    <line x1="45" y1="140" x2="65" y2="140" stroke="#34d399" stroke-width="2" opacity="0.8" />
+    <line x1="33" y1="170" x2="77" y2="170" stroke="#a78bfa" stroke-width="2" opacity="0.8" />
+    <line x1="30" y1="200" x2="80" y2="200" stroke="#f472b6" stroke-width="2" opacity="0.8" />
+    
+    <!-- Nodes on Backbones -->
+    <circle cx="30" cy="30" r="5" fill="#60a5fa" />
+    <circle cx="80" cy="30" r="5" fill="#f472b6" />
+    <circle cx="48" cy="80" r="4" fill="#a78bfa" />
+    <circle cx="62" cy="80" r="4" fill="#34d399" />
+    <circle cx="30" cy="130" r="5" fill="#60a5fa" />
+    <circle cx="80" cy="130" r="5" fill="#f472b6" />
+    <circle cx="30" cy="230" r="5" fill="#34d399" />
+    <circle cx="80" cy="230" r="5" fill="#a78bfa" />
+  </g>
+
+  <!-- Core Text Section -->
+  <g transform="translate(200, 110)">
+    <text class="title-text" x="0" y="40">BIOMEDICAL DATA SCIENCE</text>
+    <text class="subtitle-text" x="0" y="80">Curated Interview Questions &amp; Practical Answers</text>
+    
+    <!-- Badges / Tags -->
+    <g transform="translate(0, 120)">
+      <!-- EHR/Clinical badge -->
+      <rect class="tag-container" x="0" y="0" width="130" height="28" />
+      <text class="tag-text" x="15" y="18">🏥 EHR &amp; Clinical</text>
+
+      <!-- Bioinformatics badge -->
+      <rect class="tag-container" x="140" y="0" width="115" height="28" />
+      <text class="tag-text" x="15" y="18" fill="#a78bfa">🧬 Genomics</text>
+
+      <!-- Statistics/Causal badge -->
+      <rect class="tag-container" x="265" y="0" width="110" height="28" />
+      <text class="tag-text" x="15" y="18" fill="#34d399">📊 Statistics</text>
+
+      <!-- Machine Learning badge -->
+      <rect class="tag-container" x="385" y="0" width="150" height="28" />
+      <text class="tag-text" x="15" y="18" fill="#fb7185">🤖 Machine Learning</text>
+    </g>
+  </g>
+
+  <!-- Network / Data Nodes (Right Side) -->
+  <g opacity="0.85">
+    <!-- Connections -->
+    <line x1="980" y1="180" x2="1050" y2="100" stroke="#334155" stroke-width="2" />
+    <line x1="1050" y1="100" x2="1100" y2="220" stroke="#334155" stroke-width="2" />
+    <line x1="980" y1="180" x2="1100" y2="220" stroke="#334155" stroke-width="2" />
+    <line x1="1100" y1="220" x2="1140" y2="130" stroke="#334155" stroke-width="2" />
+    <line x1="1050" y1="100" x2="1140" y2="130" stroke="#334155" stroke-width="2" />
+
+    <!-- Animated Data Flow along one line -->
+    <line x1="980" y1="180" x2="1050" y2="100" class="data-flow" stroke="#818cf8" stroke-width="2" />
+
+    <!-- Outer Glows & Nodes -->
+    <!-- Node 1 -->
+    <circle class="node-pulse-1" cx="1050" cy="100" r="14" fill="#38bdf8" opacity="0.3" filter="url(#glow)" />
+    <circle cx="1050" cy="100" r="7" fill="#38bdf8" />
+    
+    <!-- Node 2 -->
+    <circle class="node-pulse-2" cx="1100" cy="220" r="16" fill="#818cf8" opacity="0.3" filter="url(#glow)" />
+    <circle cx="1100" cy="220" r="8" fill="#818cf8" />
+
+    <!-- Node 3 -->
+    <circle class="node-pulse-3" cx="980" cy="180" r="12" fill="#34d399" opacity="0.3" filter="url(#glow)" />
+    <circle cx="980" cy="180" r="6" fill="#34d399" />
+
+    <!-- Node 4 (Static) -->
+    <circle cx="1140" cy="130" r="4" fill="#cbd5e1" />
+  </g>
+
+</svg>
